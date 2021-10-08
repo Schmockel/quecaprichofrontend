@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon slot="start" name="arrow-back-sharp" (click)="voltar()"></ion-icon>
+    <ion-title>Clientes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="12">
+      <ion-item>
+        <ion-input [(ngModel)]="textoPesquisa"></ion-input>
+        <ion-icon slot="end" name="search-sharp" (click)="pesquisar()"></ion-icon>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">
+      <ion-list *ngFor="let cliente of listaClientes">
+        <ion-item lines="none">
+          <ion-label>{{cliente.nome}}</ion-label>
+          <ion-icon slot="end" name="create" (click)="detalhes(cliente.clienteId)"></ion-icon>
+          <ion-icon slot="end" name="trash-outline" (click)="remover(cliente.clienteId)"></ion-icon>
+        </ion-item>
+      </ion-list>
+      <h1 *ngIf="!exibirlistaClientes">Lista vazia</h1>
+    </ion-col>
+  </ion-row>
+
+  <ion-icon name="add-outline" class="icone-adicionar" [routerLink]="['adicionar']" routerDirection="forward"></ion-icon>
+</ion-content>

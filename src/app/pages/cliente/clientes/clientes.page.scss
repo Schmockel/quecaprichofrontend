@@ -1,0 +1,23 @@
+ion-toolbar {
+  ion-icon {
+    font-size: 25px;
+    margin-left: 20px;
+    position: absolute;
+  }
+
+  ion-title {
+    text-align: center;
+  }
+}
+
+h1 {
+  text-align: center;
+  color: #04423c;
+}
+.icone-adicionar {
+  position: fixed;
+  right: 20px;
+  color: black;
+  bottom: 20px;
+  font-size: 40px;
+}
