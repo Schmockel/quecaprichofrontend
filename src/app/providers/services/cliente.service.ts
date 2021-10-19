@@ -18,7 +18,6 @@ export class ClienteService {
   }
 
   public async Pesquisar(textoPesquisa: string): Promise<Cliente[]> {
-    console.log(textoPesquisa);
     return await this.httpRequestService.Get(`${this.BaseMetodo}/pesquisar/${textoPesquisa}`,)
       .then(response => { return response as Cliente[]; })
       .catch(ex => { throw ex; });
@@ -26,6 +25,12 @@ export class ClienteService {
 
   public async Adicionar(cliente: Cliente): Promise<Cliente> {
     return await this.httpRequestService.Post(`${this.BaseMetodo}/adicionar`, cliente)
+      .then(response => { return response as Cliente; })
+      .catch(ex => { throw ex; });
+  }
+
+  public async Alterar(cliente: Cliente): Promise<Cliente> {
+    return await this.httpRequestService.Post(`${this.BaseMetodo}/alterar`, cliente)
       .then(response => { return response as Cliente; })
       .catch(ex => { throw ex; });
   }
