@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon class="icone-voltar" slot="start" name="arrow-back-sharp" (click)="voltar()"></ion-icon>
+    <ion-title>Adicionar cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formAdicionarCliente" (ngSubmit)="cadastrar()">
+    <div class="div-form-login">
+      <ion-item>
+        <ion-label position="floating">Nome</ion-label>
+        <ion-input formControlName="nome" type="text" maxlength="100">
+        </ion-input>
+      </ion-item>
+      <div *ngIf="eventoSubmit && errorControl.nome.errors?.required" class="div-erro">
+        <ion-label class="texto-erro ion-padding" *ngFor="let error of errorMessages.nome">
+          {{error.message}}
+        </ion-label>
+      </div>
+    </div>
+    <div class="div-form-login">
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input formControlName="email" type="text" maxlength="100"></ion-input>
+      </ion-item>
+      <div *ngIf="eventoSubmit && errorControl.email.errors?.required" class="div-erro">
+        <ion-label class="texto-erro ion-padding" *ngFor="let error of errorMessages.email">
+          {{error.message}}
+        </ion-label>
+      </div>
+    </div>
+    <div class="div-form-login">
+      <ion-item>
+        <ion-label position="floating">CPF</ion-label>
+        <ion-input simpleMask="999.999.999-99" formControlName="cpf" inputmode="numeric" maxlength="14"></ion-input>
+      </ion-item>
+      <div *ngIf="eventoSubmit && errorControl.cpf.errors?.required" class="div-erro">
+        <ion-label class="texto-erro ion-padding" *ngFor="let error of errorMessages.cpf">
+          {{error.message}}
+        </ion-label>
+      </div>
+    </div>
+    <div class="div-form-login">
+      <ion-item>
+        <ion-label position="floating">Endereco</ion-label>
+        <ion-input formControlName="endereco" type="text" maxlength="150"></ion-input>
+      </ion-item>
+      <div *ngIf="eventoSubmit && errorControl.endereco.errors?.required" class="div-erro">
+        <ion-label class="texto-erro ion-padding" *ngFor="let error of errorMessages.endereco">
+          {{error.message}}
+        </ion-label>
+      </div>
+    </div>
+    <div class="div-form-login">
+      <ion-item>
+        <ion-label position="floating">Telefone Celular</ion-label>
+        <ion-input formControlName="celular" simpleMask="(99) 99999-9999" inputmode="numeric" maxlength="15">
+        </ion-input>
+      </ion-item>
+      <div *ngIf="eventoSubmit && errorControl.celular.errors?.required" class="div-erro">
+        <ion-label class="texto-erro ion-padding" *ngFor="let error of errorMessages.celular">
+          {{error.message}}
+        </ion-label>
+      </div>
+    </div>
+    <div class="div-form-login">
+      <ion-item>
+        <ion-label position="floating">Telefone Fixo</ion-label>
+        <ion-input simpleMask="(99) 9999-9999" formControlName="fixo" inputmode="numeric" maxlength="14">
+        </ion-input>
+      </ion-item>
+      <div *ngIf="eventoSubmit && errorControl.fixo.errors?.required" class="div-erro">
+        <ion-label class="texto-erro ion-padding" *ngFor="let error of errorMessages.fixo">
+          {{error.message}}
+        </ion-label>
+      </div>
+    </div>
+    <div class="div-form-login div-btn-cadastrar">
+      <ion-button (click)="cadastrar()">Cadastrar</ion-button>
+    </div>
+  </form>
+</ion-content>

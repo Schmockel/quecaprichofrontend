@@ -32,8 +32,6 @@ export class LoginPage {
 
     await this.authService.Logar(usuarioLogin)
       .then((result) => {
-        console.log(result);
-
         if (!result) {
           this.util.DismissLoading(loader);
           this.util.ToastError("Login ou senha inválidos!");
@@ -44,7 +42,6 @@ export class LoginPage {
         this.router.navigateByUrl("home");
       })
       .catch((err) => {
-        console.log(err);
         this.util.DismissLoading(loader);
         this.util.ToastError("Ocorreu um erro inesperado!");
       })

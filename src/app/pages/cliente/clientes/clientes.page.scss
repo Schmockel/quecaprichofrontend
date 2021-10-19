@@ -1,8 +1,9 @@
 ion-toolbar {
-  ion-icon {
+  .icone-voltar {
     font-size: 25px;
     margin-left: 20px;
     position: absolute;
+    z-index: 10;
   }
 
   ion-title {
@@ -10,10 +11,23 @@ ion-toolbar {
   }
 }
 
+ion-row {
+  ion-col {
+    ion-list{
+      border-radius: 5px;
+    }
+
+    ion-item {
+      --highlight-background: transparent;
+    }
+  }
+}
+
 h1 {
   text-align: center;
   color: #04423c;
 }
+
 .icone-adicionar {
   position: fixed;
   right: 20px;

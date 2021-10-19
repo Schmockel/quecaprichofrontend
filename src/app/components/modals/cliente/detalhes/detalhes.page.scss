@@ -1,9 +1,10 @@
 ion-header {
   ion-toolbar {
-    ion-icon {
+    .icone-voltar {
       font-size: 25px;
       margin-left: 20px;
       position: absolute;
+      z-index: 10;
     }
 
     ion-title {
@@ -28,18 +29,29 @@ ion-item.item-has-focus > ion-label {
 }
 
 ion-content {
-  ion-grid {
-    margin-top: 40px;
+  margin-top: 40px;
 
-    ion-row {
-      margin: 0 20px;
+  form {
+    margin-top: 20px;
+  }
+
+  .div-btn-salvar {
+    text-align: center;
+
+    ion-button {
+      width: 90%;
     }
+  }
 
-    .row-cadastrar {
-      margin: 0 40px;
-      ion-button {
-        width: 100%;
-      }
+  .div-erro {
+    margin: 0 20px;
+    font-size: 13px;
+
+    .texto-erro {
+      color: red;
+      background: #026a60;
+      display: block;
+      padding: 1px 15px;
     }
   }
 }
