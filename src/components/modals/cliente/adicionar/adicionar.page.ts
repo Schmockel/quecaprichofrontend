@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
-import { Cliente } from 'src/app/domain/entities/cliente';
-import { ClienteService } from 'src/app/providers/services/cliente.service';
-import { UtilProvider } from 'src/app/providers/tools/util.tool';
+import { Cliente } from 'src/domain/entities/cliente';
+import { ClienteService } from 'src/providers/services/cliente.service';
+import { UtilProvider } from 'src/providers/tools/util.tool';
 
 @Component({
   selector: 'app-adicionar',

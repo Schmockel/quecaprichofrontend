@@ -9,27 +9,27 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then(m => m.LoginPageModule)
+    loadChildren: () => import('../pages/login/login.module').then(m => m.LoginPageModule)
   },
   {
     path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule)
+    loadChildren: () => import('../pages/home/home.module').then(m => m.HomePageModule)
   },
   {
     path: 'produtos',
-    loadChildren: () => import('./pages/produto/produtos/produtos.module').then(m => m.ProdutosPageModule)
+    loadChildren: () => import('../pages/produto/produtos/produtos.module').then(m => m.ProdutosPageModule)
   },
   {
     path: 'detalhes',
-    loadChildren: () => import('./pages/produto/detalhes/detalhes.module').then(m => m.DetalhesPageModule)
+    loadChildren: () => import('../pages/produto/detalhes/detalhes.module').then(m => m.DetalhesPageModule)
   },
   {
     path: 'produto/adicionar',
-    loadChildren: () => import('./pages/produto/adicionar/adicionar.module').then(m => m.AdicionarPageModule)
+    loadChildren: () => import('../pages/produto/adicionar/adicionar.module').then(m => m.AdicionarPageModule)
   },
   {
     path: 'clientes',
-    loadChildren: () => import('./pages/cliente/clientes/clientes.module').then(m => m.ClientesPageModule)
+    loadChildren: () => import('../pages/cliente/clientes/clientes.module').then(m => m.ClientesPageModule)
   }
 ];
 

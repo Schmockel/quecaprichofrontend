@@ -6,13 +6,13 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { UtilProvider } from './providers/tools/util.tool';
+import { UtilProvider } from '../providers/tools/util.tool';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { SimpleMaskDirective, SimpleMaskModule, SimpleMaskPipe } from 'ngx-ion-simple-mask';
-import { DetalhesPage } from './components/modals/cliente/detalhes/detalhes.page';
-import { AdicionarPage } from './components/modals/cliente/adicionar/adicionar.page';
+import { SimpleMaskModule } from 'ngx-ion-simple-mask';
+import { DetalhesPage } from '../components/modals/cliente/detalhes/detalhes.page';
+import { AdicionarPage } from '../components/modals/cliente/adicionar/adicionar.page';
 
 @NgModule({
   declarations: [AppComponent, DetalhesPage, AdicionarPage],

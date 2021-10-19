@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Cliente } from 'src/app/domain/entities/cliente';
-import { UsuarioLoginResult } from 'src/app/domain/value-objects/usuario-login-result';
+import { Cliente } from 'src/domain/entities/cliente';
 import { HttpRequestService } from '../commons/http-request-service';
 
 @Injectable({

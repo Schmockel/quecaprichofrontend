@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController, ModalController } from '@ionic/angular';
 import { AppComponent } from 'src/app/app.component';
-import { AdicionarPage } from 'src/app/components/modals/cliente/adicionar/adicionar.page';
-import { DetalhesPage } from 'src/app/components/modals/cliente/detalhes/detalhes.page';
-import { Cliente } from 'src/app/domain/entities/cliente';
-import { ClienteService } from 'src/app/providers/services/cliente.service';
-import { UtilProvider } from 'src/app/providers/tools/util.tool';
+import { AdicionarPage } from 'src/components/modals/cliente/adicionar/adicionar.page';
+import { DetalhesPage } from 'src/components/modals/cliente/detalhes/detalhes.page';
+import { Cliente } from 'src/domain/entities/cliente';
+import { ClienteService } from 'src/providers/services/cliente.service';
+import { UtilProvider } from 'src/providers/tools/util.tool';
 
 @Component({
   selector: 'app-clientes',
