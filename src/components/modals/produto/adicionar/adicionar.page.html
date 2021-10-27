@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon class="icone-voltar" slot="start" name="arrow-back-sharp" (click)="voltar()"></ion-icon>
+    <ion-title>Adicionar produto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formAdicionarProduto" (ngSubmit)="cadastrar()">
+    <div class="div-form-adicionar-imagem">
+      <div class="div-foto" *ngFor="let foto of produto.ProdutoFotos">
+        <ion-img src="foto.Url"></ion-img>
+      </div>
+      <ion-input type="file" accept="jpg"> </ion-input>
+    </div>
+    <div class="div-form-adicionar-produto">
+      <ion-item>
+        <ion-label position="floating">Nome</ion-label>
+        <ion-input formControlName="nome" type="text" maxlength="100">
+        </ion-input>
+      </ion-item>
+      <div *ngIf="eventoSubmit && errorControl.nome.errors?.required" class="div-erro">
+        <ion-label class="texto-erro ion-padding" *ngFor="let error of errorMessages.nome">
+          {{error.message}}
+        </ion-label>
+      </div>
+    </div>
+    <div class="div-form-adicionar-produto">
+      <ion-item>
+        <ion-label position="floating">Valor</ion-label>
+        <ion-input formControlName="valor" inputmode="numeric" maxlength="13">
+        </ion-input>
+      </ion-item>
+      <div *ngIf="eventoSubmit && errorControl.valor.errors?.required" class="div-erro">
+        <ion-label class="texto-erro ion-padding" *ngFor="let error of errorMessages.valor">
+          {{error.message}}
+        </ion-label>
+      </div>
+    </div>
+    <div class="div-form-adicionar-produto">
+      <ion-item>
+        <ion-select formControlName="categoria" [(ngModel)]="categoriaSelecionadaId" interface="alert"
+          placeholder="Categoria" okText="Aceitar" cancelText="Cancelar">
+          <ion-select-option *ngFor="let categoria of listaCategorias" [value]="categoria.CategoriaId">
+            {{categoria.Nome}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <div *ngIf="eventoSubmit && errorControl.categoria.errors?.required" class="div-erro">
+        <ion-label class="texto-erro ion-padding" *ngFor="let error of errorMessages.categoria">
+          {{error.message}}
+        </ion-label>
+      </div>
+    </div>
+    <div class="div-form-adicionar-produto div-btn-cadastrar">
+      <ion-button (click)="cadastrar()">Cadastrar</ion-button>
+    </div>
+  </form>
+</ion-content>

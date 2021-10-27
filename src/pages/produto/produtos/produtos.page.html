@@ -1,9 +1,38 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>produtos</ion-title>
+  <ion-toolbar class="ion-no-border">
+    <ion-icon class="icone-voltar" slot="start" name="arrow-back-sharp" (click)="voltar()"></ion-icon>
+    <ion-title>Produtos</ion-title>
   </ion-toolbar>
 </ion-header>
-
+<!-- <div class="div-fundo"> -->
+<!-- </div> -->
 <ion-content>
-
+  <ion-row>
+    <ion-col size="12">
+      <ion-item class="item-pesquisa">
+        <ion-input [(ngModel)]="textoPesquisa"></ion-input>
+        <ion-icon slot="end" name="search-sharp" (click)="pesquisar()"></ion-icon>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <div class="separador"></div>
+  <ion-row id="rowListaProdutos">
+    <ion-col size="12">
+      <ion-list id="listaProdutos">
+        <ion-item *ngFor="let produto of listaProdutos" lines="none">
+          <ion-img src="./../../../assets/imgs/bolo-trufado-e-ninho.jpg" class="img-produto"></ion-img>
+          <div class="div-info-produto">
+            <ion-label class="label-nome-produto" (click)="detalhes(produto.ProdutoId)">{{produto.Nome}}</ion-label>
+            <ion-label class="label-categoria-produto" (click)="detalhes(produto.ProdutoId)">
+              {{produto.CategoriaProduto.Nome}}</ion-label>
+            <ion-label class="label-valor-produto" (click)="detalhes(produto.ProdutoId)">R$ {{produto.Valor}}
+            </ion-label>
+          </div>
+        </ion-item>
+      </ion-list>
+      <h1 *ngIf="!exibirlistaProdutos">Lista vazia</h1>
+    </ion-col>
+  </ion-row>
+  <ion-icon name="add-outline" class="icone-adicionar" (click)="adicionar()">
+  </ion-icon>
 </ion-content>

@@ -15,7 +15,6 @@ ion-header {
 
 ion-content,
 ion-item {
-  color: white;
   --highlight-height: 0px;
   padding: 0 20px;
 
@@ -24,15 +23,28 @@ ion-item {
   }
 }
 
-ion-item.item-has-focus > ion-label {
-  color: white !important;
-}
 
 ion-content {
+  input:-webkit-autofill{
+    -webkit-text-fill-color: yellow !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+  color: white;
   margin-top: 40px;
 
   form {
     margin-top: 20px;
+  }
+
+  ion-item.item-has-focus>ion-label {
+    color: white !important;
   }
 
   .div-btn-cadastrar {
@@ -54,4 +66,10 @@ ion-content {
       padding: 1px 15px;
     }
   }
+}
+
+.div-adicionar-produto {
+  border-radius: 20px;
+  background: #098E6D;
+  color: white;
 }

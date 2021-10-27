@@ -6,19 +6,20 @@ import { IonicModule } from '@ionic/angular';
 
 import { AdicionarPageRoutingModule } from './adicionar-routing.module';
 
-import { AdicionarPage } from './adicionar.page';
+import { AdicionarProdutoPage } from './adicionar.page';
 import { SimpleMaskModule } from 'ngx-ion-simple-mask';
 import { BrowserModule } from '@angular/platform-browser';
+
 @NgModule({
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     BrowserModule,
-    FormsModule,
     IonicModule,
     AdicionarPageRoutingModule,
-    ReactiveFormsModule,
     SimpleMaskModule
   ],
-  declarations: [AdicionarPage]
+  declarations: [AdicionarProdutoPage]
 })
 export class AdicionarPageModule { }

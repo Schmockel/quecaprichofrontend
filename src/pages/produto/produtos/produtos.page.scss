@@ -1,0 +1,117 @@
+ion-header {
+  ion-toolbar {
+    --background: transparent;
+
+    .icone-voltar {
+      font-size: 25px;
+      margin-left: 20px;
+      position: absolute;
+      z-index: 10;
+    }
+
+    ion-title {
+      text-align: center;
+    }
+  }
+
+  &.header-md::after {
+    background: none;
+  }
+}
+
+ion-content {
+  // --background: transparent;
+
+  ion-row {
+    ion-col {
+      ion-list {
+        border-radius: 5px;
+        padding: 0;
+      }
+
+      ion-item {
+        // --ion-item-background: #098E6D;
+        --highlight-background: 1px solid red;
+        --ion-item-background: white !important;
+        --background: white;
+
+        margin: 10px 10px;
+        border-radius: 10px;
+
+        ion-img {
+          width: 100px;
+          margin: 15px 0;
+        }
+
+        .div-info-produto {
+          height: 100%;
+          color: black;
+
+          .label-nome-produto {
+            margin: 15px 0 0 10px;
+            font-weight: bold;
+          }
+
+          .label-categoria-produto {
+            margin: 5px 0 0 10px;
+            color: grey;
+            font-size: 13px;
+          }
+
+          .label-valor-produto {
+            margin: 10px 0 0 10px;
+            font-weight: bold;
+          }
+
+          .label-valor-produto {
+            color: green;
+          }
+        }
+
+        &.item-pesquisa {
+          --ion-item-background: white !important;
+          --background: #098E6D;
+
+          ion-icon {
+            color: grey;
+          }
+        }
+      }
+    }
+
+    &#rowListaProdutos {
+      overflow: auto;
+    }
+  }
+
+
+  .separador {
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    // background: #0ecc9d;
+    border-radius: 0 0 16px 16px;
+  }
+
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+  }
+
+  .icone-adicionar {
+    position: fixed;
+    right: 20px;
+    color: black;
+    bottom: 20px;
+    font-size: 40px;
+    border-radius: 20px;
+    background: white;
+    color: #098E6D;
+  }
+
+
+
+}
+
+// #0ecc9d

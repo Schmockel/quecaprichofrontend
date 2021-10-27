@@ -16,23 +16,18 @@ const routes: Routes = [
     loadChildren: () => import('../pages/home/home.module').then(m => m.HomePageModule)
   },
   {
+    path: 'clientes',
+    loadChildren: () => import('../pages/cliente/clientes/clientes.module').then(m => m.ClientesPageModule)
+  },
+  {
     path: 'produtos',
     loadChildren: () => import('../pages/produto/produtos/produtos.module').then(m => m.ProdutosPageModule)
   },
   {
-    path: 'detalhes',
+    path: 'produtos/detalhes/:produto_id',
     loadChildren: () => import('../pages/produto/detalhes/detalhes.module').then(m => m.DetalhesPageModule)
   },
-  {
-    path: 'produto/adicionar',
-    loadChildren: () => import('../pages/produto/adicionar/adicionar.module').then(m => m.AdicionarPageModule)
-  },
-  {
-    path: 'clientes',
-    loadChildren: () => import('../pages/cliente/clientes/clientes.module').then(m => m.ClientesPageModule)
-  }
 ];
-
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
