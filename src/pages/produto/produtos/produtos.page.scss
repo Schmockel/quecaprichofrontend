@@ -1,7 +1,7 @@
 ion-header {
   ion-toolbar {
-    --background: transparent;
-
+    --background: #CC8C83;
+    
     .icone-voltar {
       font-size: 25px;
       margin-left: 20px;
@@ -10,7 +10,10 @@ ion-header {
     }
 
     ion-title {
+      font-style: italic;
+      font-size: 20px;
       text-align: center;
+      text-shadow:-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     }
   }
 
@@ -20,20 +23,21 @@ ion-header {
 }
 
 ion-content {
-  // --background: transparent;
+--background: #F8F3E0;
 
   ion-row {
     ion-col {
       ion-list {
         border-radius: 5px;
         padding: 0;
+        background: #F8F3E0;
       }
 
       ion-item {
         // --ion-item-background: #098E6D;
         --highlight-background: 1px solid red;
-        --ion-item-background: white !important;
-        --background: white;
+        --ion-item-background: #F8F3E0 !important;
+        --background: #FCFCFC;
 
         margin: 10px 10px;
         border-radius: 10px;
@@ -42,10 +46,17 @@ ion-content {
           width: 100px;
           margin: 15px 0;
         }
-
+        //sombra de cada produto
+        box-shadow: 0 1px 1px rgba(0,0,0,0.08), 
+                0 2px 2px rgba(0,0,0,0.12), 
+                0 4px 4px rgba(0,0,0,0.16), 
+                0 8px 8px rgba(0,0,0,0.20);
+       // box-shadow: 1px 3px 1px black;
+        border: 2px solid black;
         .div-info-produto {
           height: 100%;
           color: black;
+          
 
           .label-nome-produto {
             margin: 15px 0 0 10px;
@@ -69,8 +80,8 @@ ion-content {
         }
 
         &.item-pesquisa {
-          --ion-item-background: white !important;
-          --background: #098E6D;
+         // --ion-item-background: #F0AF51 !important;
+          --background: #F0AF51;
 
           ion-icon {
             color: grey;
@@ -106,9 +117,11 @@ ion-content {
     bottom: 20px;
     font-size: 40px;
     border-radius: 20px;
-    background: white;
+    background: #F8C9B9;
     color: #098E6D;
-  }
+    box-shadow: 1px 3px 1px black;
+    border: 1px solid black;
+    }
 
 
 

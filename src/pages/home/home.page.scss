@@ -30,14 +30,16 @@ ion-content {
 
       img {
         text-align: center;
-        width: 80px;
+        width: 65px;
       }
 
       ion-label {
-        text-align: left;
-        padding: 0 20px;
+        margin-left: auto;
+        margin-right: auto;
+        //text-align: left;
+       // padding: 0 20px;
         color: black;
-        margin-top: 20px;
+        //margin-top: 20px;
       }
     }
   }

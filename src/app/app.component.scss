@@ -1,14 +1,19 @@
-body {
-  --background: #4bd7ad !important;
-  background: #4bd7ad !important;
-}
+//body {
+//  --background: red !important;
+ // background: red !important;
+//}
 
 ion-router-outlet {
   user-select: none;
 }
 
 ion-menu,
-ion-menu ion-item,
-ion-menu ion-list {
-  --background: #026a60 !important;
+ion-menu ion-list,
+ion-menu ion-item{
+  --background: #AB776C;
+}
+
+
+item-native{
+ --background: blue !important;//#CC8C83;
 }
